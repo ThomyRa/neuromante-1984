@@ -38,17 +38,18 @@ namespace UCS.App.Consola
             Console.WriteLine("\nOperaciones CRUD para Estudiante:");
             //AddEstudiante();
             //BuscarEstudiante(1);
-            ActualizarEstudiante();
+            //ActualizarEstudiante();
             //BuscarTodosLosEstudiantes();
             //EliminarEstudiante(1);
 
             Console.WriteLine("\nOperaciones CRUD para Sistema Ingreso Personal:");
-            //AddSistemaIngresoPersonal();
-            //BuscarSistemaIngresoPersonal(1);
-            //ActualizarSistemaIngresoPersonal();
-            EliminarSistemaIngresoPersonal(2);
+            AddSistemaIngresoPersonal();
+            BuscarSistemaIngresoPersonal(1);
+            ActualizarSistemaIngresoPersonal();
+            EliminarSistemaIngresoPersonal(1);
 
         }
+
 
         //AddDirectivo
         private static void AddDirectivo()
