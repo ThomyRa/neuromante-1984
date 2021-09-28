@@ -6,12 +6,16 @@ namespace UCS.App.Persistencia.AppRepositorio
 {
     public class RepositorioEstudiante : IRepositorioEstudiante
     {
-        private readonly AppContext _appContext;
+        private readonly AppContext _appContext;        
+
+        
 
         public RepositorioEstudiante(AppContext appContext)
         {
             _appContext = appContext;
         }
+
+        
 
         public Estudiante AddEstudiante(Estudiante Estudiante)
         {

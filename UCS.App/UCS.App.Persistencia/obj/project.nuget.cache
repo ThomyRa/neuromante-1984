@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zd16246tQu/0fzM3q6Z7pPAdnxLZ0RlbRcq7/7nm5US3CrXYsU8+21niCNcLNPz9HX0SNHABDbBgqECk3y3vpw==",
+  "dgSpecHash": "/g1kWh9Nzk23udgZqMz98nz+aABSS+JjZmAVM4ItHslCsWqzVhlBo268v7zNPEhahuYnUg5OyIUoh7slrUURaw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\Misión TIC 2022\\C3\\DS-C3-23\\Modulo 03\\neuromante\\neuromante-1984\\UCS.App\\UCS.App.Persistencia\\UCS.App.Persistencia.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\Misión TIC 2022\\C3\\DS-C3-23\\Modulo 04\\neuromante\\neuromante-1984\\UCS.App\\UCS.App.Persistencia\\UCS.App.Persistencia.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

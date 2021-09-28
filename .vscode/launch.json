@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/UCS.App/UCS.App.Servicios/bin/Debug/netcoreapp3.1/UCS.App.Servicios.dll",
+            "program": "${workspaceFolder}/UCS.App/UCS.App.Frontend/bin/Debug/netcoreapp3.1/UCS.App.Frontend.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/UCS.App/UCS.App.Servicios",
+            "cwd": "${workspaceFolder}/UCS.App/UCS.App.Frontend",
             "stopAtEntry": false,
             // Enable launching a web browser when ASP.NET Core starts. For more information: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {

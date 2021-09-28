@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gm1vNz36oejQpbmzoceYj/ZxDnlEwEdc8Yl8iwwYSOB9w2i6uKFyVMDq0dOXDePxb0QSMYU30EFu1xZSZruj0A==",
+  "dgSpecHash": "8N5M2V5+qpCQ4yGM3xa3DlebUmb0t0i51F2I+kj0NWwzW3VR4KRFMBgY00BPUXCf2BSyTyObVPzHdID5gDiWNg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\Misión TIC 2022\\C3\\DS-C3-23\\Modulo 03\\neuromante\\neuromante-1984\\UCS.App\\UCS.App.Consola\\UCS.App.Consola.csproj",
+  "projectFilePath": "C:\\Users\\admin\\Downloads\\Misión TIC 2022\\C3\\DS-C3-23\\Modulo 04\\neuromante\\neuromante-1984\\UCS.App\\UCS.App.Consola\\UCS.App.Consola.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

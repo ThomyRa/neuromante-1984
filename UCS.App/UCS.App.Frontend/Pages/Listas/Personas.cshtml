@@ -1,0 +1,62 @@
+﻿@page
+@model UCS.App.Frontend.Pages.PersonasModel
+@{
+}
+<h1>Lista de Profesores</h1>
+<table class="table">
+    
+    <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>edad </th>
+        <th>Departamento </th>
+        <th>Materia </th>
+        <th>detalles </th>
+    </tr>
+@foreach (var profesor in Model.Profesores_S)
+{
+    <tr>
+            <td>@profesor.id</td>
+            <td>@profesor.nombre</td>
+            <td>@profesor.apellido</td>
+            <td>@profesor.edad </td>
+            <td>@profesor.departamento </td>
+            <td>@profesor.materia </td>
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-profesorId="@profesor.id">
+                    <i class="fas fa-info-circle"></i> Detalle profesor
+                </a>
+            </td>
+    </tr>
+}
+</table>
+
+
+<h1>Lista de estudiantes</h1>
+<table class="table">
+    
+    <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>edad </th>
+        <th>detalles </th>
+    </tr>
+@foreach (var estudiante in Model.Estudiantes)
+{
+    <tr>
+            <td>@estudiante.id</td>
+            <td>@estudiante.nombre</td>
+            <td>@estudiante.apellido</td>
+            <td>@estudiante.edad </td>
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-estudianteId="@estudiante.id">
+                    <i class="fas fa-info-circle"></i> Detalle Estudiante
+                </a>
+            </td>
+    </tr>
+}
+</table>

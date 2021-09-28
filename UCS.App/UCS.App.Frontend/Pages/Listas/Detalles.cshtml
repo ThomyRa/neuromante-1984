@@ -1,0 +1,62 @@
+﻿@page
+@model UCS.App.Frontend.Pages.DetallesModel
+@{
+}
+
+@{
+    int? profesorId = @Model.Profesor?.id;
+    int? estudianteId = @Model.Estudiante?.id;
+
+
+    if(profesorId.HasValue){
+        Console.WriteLine("Profesor: "+@Model.Profesor);
+        <h1>Detalles de profesor</h1>
+        <table class="table">
+            
+                <tr><td>Id: @Model.Profesor.id</td></tr>
+                <tr><td>Nombre: @Model.Profesor.nombre </td></tr>
+                <tr><td>Apellido: @Model.Profesor.apellido</td></tr>
+                <tr><td>identificacion: @Model.Profesor.identificacion</td></tr>
+                <tr><td>edad: @Model.Profesor.edad</td></tr>
+                <tr><td>estado covid: @Model.Profesor.EstadoCovid</td></tr>
+                <tr><td>Departamento: @Model.Profesor.departamento</td></tr>
+                <tr><td>Materia: @Model.Profesor.materia </td></tr>
+                <tr><td>
+                    <a class="btn btn-primary table-btn" asp-page="../Listas/Personas/">
+                            Lista Personas
+                        </a>
+                </td></tr>
+                    
+            
+            
+        </table>
+    }
+
+    if(estudianteId.HasValue){
+        Console.WriteLine("Estudiante: "+@Model.Estudiante);
+        <h1>Detalles de Estudiante</h1>
+        <table class="table">
+           
+                <tr><td>Id: @Model.Estudiante.id</td></tr>
+                <tr><td>Nombre: @Model.Estudiante.nombre </td></tr>
+                <tr><td>Apellido: @Model.Estudiante.apellido</td></tr>
+                <tr><td>identificacion: @Model.Estudiante.identificacion</td></tr>
+                <tr><td>edad: @Model.Estudiante.edad</td></tr>
+                <tr><td>estado covid: @Model.Estudiante.EstadoCovid</td></tr>
+                <tr><td>carrera: @Model.Estudiante.carrera </td></tr>
+                <tr><td>Semestre: @Model.Estudiante.Semestre </td></tr>
+                <tr><td>
+                    <a class="btn btn-primary table-btn" asp-page="../Listas/Personas/">
+                            Lista Personas
+                        </a>
+                </td></tr> 
+                    
+            
+            
+        </table>
+    }
+
+
+}
+
+
