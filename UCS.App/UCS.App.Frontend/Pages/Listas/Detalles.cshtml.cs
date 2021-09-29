@@ -12,34 +12,30 @@ namespace UCS.App.Frontend.Pages
 {
     public class DetallesModel : PageModel
     {
-        public Profesores Profesor{get;set;}
-
         
-
-        private readonly IRepositorioEstudiante RepositorioEstudiante;
-
-        public DetallesModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores)
+        public DetallesModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores, IRepositorioDirectivo RepositorioDirectivo)
         {
+            this.RepositorioDirectivo = RepositorioDirectivo;
             this.RepositorioEstudiante = RepositorioEstudiante;
             this.RepositorioProfesores = RepositorioProfesores;
         }
-
+        private readonly IRepositorioDirectivo RepositorioDirectivo;
+        public IEnumerable<Directivo> Directivos{get;set;}
+        public Directivo Directivo {get;set;}
         private readonly IRepositorioProfesores RepositorioProfesores;
-
+        public IEnumerable<Profesores> Profesores_S{get;set;}
+        public Profesores Profesor{get;set;}
         
-
+        private readonly IRepositorioEstudiante RepositorioEstudiante;
         public IEnumerable<Estudiante> Estudiantes{get;set;}
         public Estudiante Estudiante {get;set;}
-
-        public IEnumerable<Profesores> Profesores_S{get;set;}
-        public Profesores Profesores {get;set;}
 
         // public void OnGet()
         // {
 
         // }
 
-        public IActionResult OnGet(int? profesorId, int? estudianteId)
+        public IActionResult OnGet(int? profesorId, int? estudianteId, int? directivoId)
         {
             if(profesorId.HasValue){
                 Console.WriteLine("profesorId: "+profesorId);
@@ -64,7 +60,20 @@ namespace UCS.App.Frontend.Pages
                 } else{
                     return Page();
                 } 
-            } else {
+            } else if(directivoId.HasValue){
+                Console.WriteLine("DirectivoId: "+directivoId);
+                Directivo = RepositorioDirectivo.GetDirectivo(directivoId.Value);
+
+                if(Directivo==null){
+                    Console.WriteLine("Error: No se ha encontrado directivo con id:"+directivoId);
+                    return RedirectToPage("./NotFound");
+
+                } else{
+                    return Page();
+                } 
+            }
+            
+            else {
                 return Page();
             }
             

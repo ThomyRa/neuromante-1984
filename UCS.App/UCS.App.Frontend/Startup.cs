@@ -34,6 +34,7 @@ namespace UCS.App.Frontend
             services.AddSession();
             services.AddTransient<IRepositorioEstudiante, RepositorioEstudiante>();
             services.AddTransient<IRepositorioProfesores, RepositorioProfesores>();
+            services.AddTransient<IRepositorioDirectivo, RepositorioDirectivo>();
             services.AddDbContext<UCS.App.Persistencia.AppContext>();
 
             

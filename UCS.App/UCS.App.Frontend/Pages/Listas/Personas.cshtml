@@ -2,16 +2,43 @@
 @model UCS.App.Frontend.Pages.PersonasModel
 @{
 }
+<h1>Lista de Directivos</h1>
+<table class="table">
+    
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Unidad Que desempeña </th>
+        <th>detalles </th>
+        
+    </tr>
+@foreach (var Directivo in Model.Directivos)
+{
+    <tr>
+            <td>@Directivo.id</td>
+            <td>@Directivo.nombre</td>
+            <td>@Directivo.apellido</td>
+            <td>@Directivo.unidadDesempeña </td>
+            
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-directivoId="@Directivo.id">
+                    <i class="fas fa-info-circle"></i> Detalle Directivo
+                </a>
+            </td>
+    </tr>
+}
+</table>
+
 <h1>Lista de Profesores</h1>
 <table class="table">
     
     <tr>
-        <th>id</th>
-        <th>nombre</th>
-        <th>apellido</th>
-        <th>edad </th>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
         <th>Departamento </th>
-        <th>Materia </th>
         <th>detalles </th>
     </tr>
 @foreach (var profesor in Model.Profesores_S)
@@ -20,13 +47,11 @@
             <td>@profesor.id</td>
             <td>@profesor.nombre</td>
             <td>@profesor.apellido</td>
-            <td>@profesor.edad </td>
             <td>@profesor.departamento </td>
-            <td>@profesor.materia </td>
-
+            
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-profesorId="@profesor.id">
-                    <i class="fas fa-info-circle"></i> Detalle profesor
+                    <i class="fas fa-info-circle"></i> Detalle Profesor
                 </a>
             </td>
     </tr>
@@ -38,10 +63,10 @@
 <table class="table">
     
     <tr>
-        <th>id</th>
-        <th>nombre</th>
-        <th>apellido</th>
-        <th>edad </th>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Carrera</th>
         <th>detalles </th>
     </tr>
 @foreach (var estudiante in Model.Estudiantes)
@@ -50,8 +75,8 @@
             <td>@estudiante.id</td>
             <td>@estudiante.nombre</td>
             <td>@estudiante.apellido</td>
-            <td>@estudiante.edad </td>
-
+            <td>@estudiante.carrera</td>
+            
             <td>
                 <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-estudianteId="@estudiante.id">
                     <i class="fas fa-info-circle"></i> Detalle Estudiante
