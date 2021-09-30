@@ -16,8 +16,8 @@ namespace UCS.App.Frontend.Pages
         private readonly IRepositorioEstudiante RepositorioEstudiante;
         private readonly IRepositorioProfesores RepositorioProfesores;
         private readonly IRepositorioDirectivo RepositorioDirectivo;
+        private readonly IRepositorioPersonalAseo RepositorioPersonalAseo;
         
-
         public IEnumerable<Estudiante> Estudiantes{get;set;}
         public Estudiante Estudiante {get;set;}
 
@@ -27,18 +27,23 @@ namespace UCS.App.Frontend.Pages
         public IEnumerable<Directivo> Directivos{get;set;}
         public Directivo Directivo {get;set;}
 
-        public PersonasModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores, IRepositorioDirectivo RepositorioDirectivo)
+        public IEnumerable<PersonalAseo> PersonaldeAseo{get;set;}
+        public PersonalAseo PersonalAseo {get;set;}
+
+        public PersonasModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores, IRepositorioDirectivo RepositorioDirectivo, IRepositorioPersonalAseo RepositorioPersonalAseo)
         {
             this.RepositorioEstudiante = RepositorioEstudiante;
             this.RepositorioProfesores = RepositorioProfesores;
             this.RepositorioDirectivo = RepositorioDirectivo;
+            this.RepositorioPersonalAseo = RepositorioPersonalAseo;
         }
 
         public void OnGet()
         {
             Estudiantes = RepositorioEstudiante.GetAllEstudiante();
             Profesores_S = RepositorioProfesores.GetAllProfesores();
-            Directivos = RepositorioDirectivo.GetAllDirectivo();      
+            Directivos = RepositorioDirectivo.GetAllDirectivo();
+            PersonaldeAseo = RepositorioPersonalAseo.GetAllPersonalAseo();      
         }
     }
 }

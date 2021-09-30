@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LAJJg9R5dDaP66gLZezIA+ayQ66GMHA1mp/5+zC80xRU+Or+WVLvvNLWy4d1bmZ0MMANK2ujHELRIiYss+Bydg==",
+  "dgSpecHash": "wybRcfLL2wLw3+IaYB9ZUOJc7r+fXU++MsYFYAVwXQV/8KHVkB9KAbkCVk3gmaLiCXa5zBbDNrh7tXfEujmSDw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\docentes\\Documents\\misionTIC\\ciclo 3\\desarrollo software\\semana 5\\neuromante-1984\\UCS.App\\UCS.App.Frontend\\UCS.App.Frontend.csproj",
+  "projectFilePath": "C:\\neuromante-1984-1\\UCS.App\\UCS.App.Frontend\\UCS.App.Frontend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\docentes\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\docentes\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

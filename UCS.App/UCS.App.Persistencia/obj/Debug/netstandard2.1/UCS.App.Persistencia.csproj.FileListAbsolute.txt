@@ -93,3 +93,15 @@ C:\Users\docentes\Documents\misionTIC\ciclo 3\desarrollo software\semana 5\neuro
 C:\Users\docentes\Documents\misionTIC\ciclo 3\desarrollo software\semana 5\neuromante-1984\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.csproj.CopyComplete
 C:\Users\docentes\Documents\misionTIC\ciclo 3\desarrollo software\semana 5\neuromante-1984\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.dll
 C:\Users\docentes\Documents\misionTIC\ciclo 3\desarrollo software\semana 5\neuromante-1984\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.pdb
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\bin\Debug\netstandard2.1\UCS.App.Persistencia.deps.json
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\bin\Debug\netstandard2.1\UCS.App.Persistencia.dll
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\bin\Debug\netstandard2.1\UCS.App.Persistencia.pdb
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\bin\Debug\netstandard2.1\UCS.App.Dominio.dll
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\bin\Debug\netstandard2.1\UCS.App.Dominio.pdb
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.csprojAssemblyReference.cache
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.AssemblyInfoInputs.cache
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.AssemblyInfo.cs
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.csproj.CopyComplete
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.dll
+C:\neuromante-1984-1\UCS.App\UCS.App.Persistencia\obj\Debug\netstandard2.1\UCS.App.Persistencia.pdb

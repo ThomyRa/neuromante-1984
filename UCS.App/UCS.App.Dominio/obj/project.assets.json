@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\docentes\\Documents\\misionTIC\\ciclo 3\\desarrollo software\\semana 5\\neuromante-1984\\UCS.App\\UCS.App.Dominio\\UCS.App.Dominio.csproj",
+      "projectUniqueName": "C:\\neuromante-1984-1\\UCS.App\\UCS.App.Dominio\\UCS.App.Dominio.csproj",
       "projectName": "UCS.App.Dominio",
-      "projectPath": "C:\\Users\\docentes\\Documents\\misionTIC\\ciclo 3\\desarrollo software\\semana 5\\neuromante-1984\\UCS.App\\UCS.App.Dominio\\UCS.App.Dominio.csproj",
+      "projectPath": "C:\\neuromante-1984-1\\UCS.App\\UCS.App.Dominio\\UCS.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\docentes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\docentes\\Documents\\misionTIC\\ciclo 3\\desarrollo software\\semana 5\\neuromante-1984\\UCS.App\\UCS.App.Dominio\\obj\\",
+      "outputPath": "C:\\neuromante-1984-1\\UCS.App\\UCS.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\docentes\\AppData\\Roaming\\NuGet\\NuGet.Config"

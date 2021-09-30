@@ -85,3 +85,32 @@
     </tr>
 }
 </table>
+
+<h1>Lista de Personal de Aseo</h1>
+<table class="table">
+    
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Turno de servicio </th>
+        <th>detalles </th>
+        
+    </tr>
+@foreach (var PersonalAseo in Model.PersonaldeAseo)
+{
+    <tr>
+            <td>@PersonalAseo.id</td>
+            <td>@PersonalAseo.nombre</td>
+            <td>@PersonalAseo.apellido</td>
+            <td>@PersonalAseo.turnoServicio </td>
+            
+
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./Detalles" asp-route-personalAseoId="@PersonalAseo.id">
+                    <i class="fas fa-info-circle"></i> Detalle Personal Aseo
+                </a>
+            </td>
+    </tr>
+}
+</table>

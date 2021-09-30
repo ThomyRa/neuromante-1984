@@ -13,11 +13,12 @@ namespace UCS.App.Frontend.Pages
     public class DetallesModel : PageModel
     {
         
-        public DetallesModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores, IRepositorioDirectivo RepositorioDirectivo)
+        public DetallesModel(IRepositorioEstudiante RepositorioEstudiante, IRepositorioProfesores RepositorioProfesores, IRepositorioDirectivo RepositorioDirectivo, IRepositorioPersonalAseo RepositorioPersonalAseo)
         {
             this.RepositorioDirectivo = RepositorioDirectivo;
             this.RepositorioEstudiante = RepositorioEstudiante;
             this.RepositorioProfesores = RepositorioProfesores;
+            this.RepositorioPersonalAseo = RepositorioPersonalAseo;
         }
         private readonly IRepositorioDirectivo RepositorioDirectivo;
         public IEnumerable<Directivo> Directivos{get;set;}
@@ -30,12 +31,16 @@ namespace UCS.App.Frontend.Pages
         public IEnumerable<Estudiante> Estudiantes{get;set;}
         public Estudiante Estudiante {get;set;}
 
+        private readonly IRepositorioPersonalAseo RepositorioPersonalAseo;
+        public IEnumerable<PersonalAseo> PersonaldeAseo{get;set;}
+        public PersonalAseo PersonalAseo {get;set;}
+
         // public void OnGet()
         // {
 
         // }
 
-        public IActionResult OnGet(int? profesorId, int? estudianteId, int? directivoId)
+        public IActionResult OnGet(int? profesorId, int? estudianteId, int? directivoId, int? PersonalAseoId)
         {
             if(profesorId.HasValue){
                 Console.WriteLine("profesorId: "+profesorId);
@@ -66,6 +71,20 @@ namespace UCS.App.Frontend.Pages
 
                 if(Directivo==null){
                     Console.WriteLine("Error: No se ha encontrado directivo con id:"+directivoId);
+                    return RedirectToPage("./NotFound");
+
+                } else{
+                    return Page();
+                } 
+            }
+
+            else if(PersonalAseoId.HasValue){
+                // estudianteId
+                Console.WriteLine("PersonalAseoId: "+PersonalAseoId);
+                PersonalAseo = RepositorioPersonalAseo.GetPersonalAseo(PersonalAseoId.Value);
+
+                if(PersonalAseo==null){
+                    Console.WriteLine("Error: No se ha encontrado profesor con id:"+PersonalAseoId);
                     return RedirectToPage("./NotFound");
 
                 } else{
