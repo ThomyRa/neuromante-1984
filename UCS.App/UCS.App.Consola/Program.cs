@@ -86,12 +86,10 @@ namespace UCS.App.Consola
             // BuscarUniversidades();
             // EliminarUniversidad(2);
 
-            //AdicionarSistemaIngresoEstudianteConSede();
+            AdicionarSistemaIngresoEstudianteConSede();
 
 
-            Profesores profesor1 = new Profesores{nombre="Raul",apellido="Mesa",identificacion=230,edad=34,EstadoCovid=EstadoCovid.covidNegativo,departamento="Ingeniería",materia="Ingeniería Sistemas"};
-
-            AddSalonConProfesor(profesor1);
+            
 
 
             // IEnumerable<SistemaIngresoPersonal> sistemaIngresosSede = _repoSistemaIngresoPersonal.GetSistemaIngresoPersonalConSede(NombreFacultad.ingenieria);
@@ -107,6 +105,13 @@ namespace UCS.App.Consola
             //     Console.WriteLine(sistema.id);
             // }
             // Console.WriteLine("Fin del programa");
+
+
+            Profesores profesor1 = new Profesores{nombre="Raul",apellido="Silla",identificacion=230,edad=34,EstadoCovid=EstadoCovid.covidNegativo,departamento="Ingeniería",materia="Ingeniería Sistemas"};
+            AddSalonConProfesor(profesor1);
+
+
+            AddSalonConEstudiantes();
 
         }
 
@@ -773,7 +778,20 @@ namespace UCS.App.Consola
 
             };
 
-            Console.WriteLine("SistemaIngresoPersonal ingresado >> SistemaIngresoPersonal: " + SistemaIngresoPersonal.persona + " " + SistemaIngresoPersonal.sedes);
+            Console.WriteLine("SistemaIngresoPersonal ingresado >> SistemaIngresoPersonal: ");
+            Console.WriteLine("    Personas almacenadas en el sistema:");
+            foreach (var persona in SistemaIngresoPersonal.persona)
+            {
+                Console.WriteLine("    >" + persona.nombre);
+
+            }
+            Console.WriteLine("    Sedes almacenadas en el sistema:");
+            foreach (var sede in SistemaIngresoPersonal.sedes)
+            {
+                Console.WriteLine("    >" + sede.nombreFacultad);
+                
+            }
+
             SistemaIngresoPersonal SistemaIngresoPersonalRetornado = _repoSistemaIngresoPersonal.AddSistemaIngresoPersonal(SistemaIngresoPersonal);
             if (SistemaIngresoPersonalRetornado != null)
             {
@@ -799,7 +817,42 @@ namespace UCS.App.Consola
                 profesor=profesor
 
             };
-             Console.WriteLine(salon.numeroSalon+" "+ salon.profesor);
+            Console.WriteLine("\nSalon numero: "+salon.numeroSalon+" tiene Profesor: "+ salon.profesor.nombre);
+            Salon salon_retornado = _repoSalon.AddSalon(salon);
+            if (salon_retornado!=null)
+                Console.WriteLine("Se registró un salón en la base de datos");
+        }
+
+
+        private static void AddSalonConEstudiantes()
+        {
+            List<Estudiante> estudiantesLista = new List<Estudiante>{
+                new Estudiante{
+                    nombre = "Maria",apellido="Moñitos",identificacion=111,edad=22,EstadoCovid=EstadoCovid.covidPositivo, carrera="Ingeniería",Semestre="7"
+	            },
+                new Estudiante{
+                    nombre = "Juan",apellido="Aristi",identificacion=222,edad=33,EstadoCovid=EstadoCovid.covidNegativo, carrera="Arquitectura",Semestre="2"
+	            },
+                new Estudiante{
+                    nombre = "Jose",apellido="jas",identificacion=100,edad=24,EstadoCovid=EstadoCovid.covidNegativo, carrera="Medicina",Semestre="6"
+	            },
+                
+            };
+            var salon = new Salon
+            {
+                numeroSalon=10,
+                maximoAforo=10,
+                numeroDePuesto=12,
+                estudiantes=estudiantesLista,
+                profesor=null
+
+            };
+            Console.WriteLine("\nSalon numero: "+salon.numeroSalon+" tiene los siguientes Estudiantes: ");
+            foreach (var estudiante in salon.estudiantes)
+            {
+                Console.WriteLine("    >"+ estudiante.nombre);
+            }
+            
             Salon salon_retornado = _repoSalon.AddSalon(salon);
             if (salon_retornado!=null)
                 Console.WriteLine("Se registró un salón en la base de datos");
